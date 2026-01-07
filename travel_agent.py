@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from langchain_core.output_parsers import JsonOutputParser
 load_dotenv()
 
+#Loading Prompts from JSON file
 class PromptLoader:
     def __init__(self,prompts_file='prompts.json'):
         self.prompt_file=prompts_file
@@ -199,6 +200,7 @@ result = coordinator.create_itinerary(user_input)
 print(f"Destination: {result['metadata']['destination']}")
 print(f"Duration: {result['metadata']['duration']}")
 print(f"Quality Score: {result['quality_report'].get('overall_score', 'N/A')}")
+
 
 
 
